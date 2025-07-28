@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bevy game</title>
+    <style>
+        body { margin: 0; padding: 0; }
+        canvas { 
+            display: block;
+            height: 100% 
+        }
+        body, html {height: 100%}
+    </style>
+</head>
+<body>
+    <canvas id="bevy"></canvas>
+    <script type="module">
+        import init from './pkg/monkey.js';
+        init();
+    </script>
+</body>
+</html>
