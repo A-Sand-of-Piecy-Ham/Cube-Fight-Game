@@ -1,0 +1,10 @@
+
+# [target.'cfg(all(target_family = "wasm", any(target_os = "unknown", target_os = "none")))'.dependencies]
+# # bevy_rand = { version = "0.11", features = ["wasm_js"] }
+# # getrandom = { version = "0.3", features = ["wasm_js"] }
+# getrandom = { version = "0.3", features = ["wasm_js"] } # For v0.3 and above
+# getrandom_02 = { package = "getrandom", version = "0.2", features = ["js"] }
+
+
+[target.wasm32-unknown-unknown]
+rustflags = ['--cfg', 'getrandom_backend="wasm_js"']
